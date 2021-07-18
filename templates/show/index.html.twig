@@ -1,0 +1,35 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+	<div class="containershow">
+		<div class="container2">
+			<div class="img-fluid">
+				<img src="/assets/blog/images/{{ game.image }}" alt="{{ game.title }} "/>
+			</div>
+			<div class="textdetail">
+				<h2>{{ game.title }}
+				</h2>
+				<p class="date">Crée le
+					{{ game.createdAt | date("d/m/Y") }}</p>
+				<p class="date">Date du Tombola
+					{{ game.dateEnd | date("d/m/Y") }}
+
+					{{ game.dateEnd | date("H:i") }}</p>
+				<p class="date">Date limite de Participation
+					{{ game.dateEndParticipation | date("d/m/Y") }}</p>
+				<p class="content">
+					{{ game.contenu }}
+				</p>
+			</div>
+		</div>
+		<p>Lot a gagner:
+			<img src="/assets/blog/images{{ game.gift }}">
+		</p>
+		<div class="qr">
+			<p>Code Qr du jeu:
+				<img src={{ game.Qr }} alt="{{ game.title }}">
+			</p>
+		</div>
+	</div>
+
+{% endblock %}

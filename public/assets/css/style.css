@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+*
+{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.sidebar
+{
+    position: fixed;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background: cornflowerblue;
+}
+.sidebar header
+{
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    background: royalblue;
+    user-select: none;
+    font-family: 'Ubuntu', sans-serif;
+}
+.sidebar ul a
+{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(206, 206, 206, 0.226);
+    border-bottom: 1px solid rgba(206, 206, 206, 0.226);
+    font-family: 'Ubuntu', sans-serif;
+}
+ul li:hover a
+{
+    padding-left: 50px;
+    transition: 0.4s;
+}
+.sidebar ul a i
+{
+    margin-right: 16px;
+}
+.card 
+{
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin-left: 255px;
+}
+.card
+{
+    display: flex;
+}
+.imageCard
+{
+    flex: 1;
+}
+.container 
+{
+    flex: 1;
+    padding: 2px 16px;
+} 
+.card img
+{
+    width: 200px;
+    height: 200px;
+}
+
+.qr img
+{
+    width: 100px;
+    height: 100px;
+}
+.btn
+{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: red;
+    border: 2px solid black;
+    border-radius: 5px;
+    color: #fff;
+    font-family: ubuntu, sans-serif;
+
+}
+.containershow
+{
+    margin-left: 255px;
+    /* margin-top: 10px; */
+}
+.container2
+{
+    display: flex;
+}
+.img-fluid img
+{
+    display: block;
+    width: 400px;
+    height: 400px;
+    margin-left: 25px;
+}
+.img-fluid
+{
+    flex: 1;
+    margin-top: 10px;
+    width: 400px;
+    height: 400px;
+}
+.textdetail
+{
+    flex: 1;
+}
+
+.containershow p img
+{
+    display: block;
+    width: 100px;
+    height: 100px;
+}
