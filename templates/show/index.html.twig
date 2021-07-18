@@ -9,27 +9,40 @@
 			<div class="textdetail">
 				<h2>{{ game.title }}
 				</h2>
-				<p class="date">Crée le
+				<p class="date">
+					<strong>Crée le:
+					</strong>
 					{{ game.createdAt | date("d/m/Y") }}</p>
-				<p class="date">Date du Tombola
+				<p class="date">
+					<strong>Date du Tombola:
+					</strong>
 					{{ game.dateEnd | date("d/m/Y") }}
-
+					<strong>à
+					</strong>
 					{{ game.dateEnd | date("H:i") }}</p>
-				<p class="date">Date limite de Participation
+				<strong>
+					<class="date">Date limite de Participation:
+					</strong>
 					{{ game.dateEndParticipation | date("d/m/Y") }}</p>
 				<p class="content">
 					{{ game.contenu }}
 				</p>
 			</div>
 		</div>
-		<p>Lot a gagner:
-			<img src="/assets/blog/images{{ game.gift }}">
-		</p>
-		<div class="qr">
-			<p>Code Qr du jeu:
-				<img src={{ game.Qr }} alt="{{ game.title }}">
-			</p>
+		<div class="container3">
+			<div class="left">
+				<p>
+					<strong>Lot a gagner:
+					</strong>
+				</p>
+				<img src="/assets/blog/images/{{ game.gift }}"/>
+			</div>
+			<div class="qr">
+				<strong>
+					<p>Code Qr du jeu:</p>
+				</strong>
+				<img src="/assets/blog/images/{{ game.qr }}" alt="{{ game.title }}"/>
+			</div>
 		</div>
 	</div>
-
 {% endblock %}
