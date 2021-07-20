@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&family=Roboto+Slab&family=Pacifico&display=swap');
 
 *
 {
@@ -17,13 +17,17 @@
 }
 .sidebar header
 {
-    font-size: 22px;
+    font-size: 40px;
     color: white;
-    text-align: center;
+    padding-left: 20px;
+    /* margin-left: 10px; */
+    /* text-align: center; */
     line-height: 70px;
     background: royalblue;
     user-select: none;
-    font-family: 'Ubuntu', sans-serif;
+    /* font-family: 'Ubuntu', sans-serif; */
+    font-family: 'Pacifico', cursive;
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
 }
 .sidebar ul a
 {
@@ -105,11 +109,114 @@ ul li:hover a
     grid-template: repeat(3, 1fr) / repeat(3, 1fr);
     gap: 50px 5px; */
     padding: 10px;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto;
     grid-column-gap: 15px;
     grid-row-gap: 15px;
 }
-/* .row {grid-template-columns: repeat(2, 1fr);} */
+@media screen and (max-width: 1500px)
+{
+    .row
+    {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-column-gap: 15px;
+        grid-row-gap: 15px;
+    }
+}
+@media screen and (max-width: 700px)
+{
+    .row
+    {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-column-gap: 15px;
+        grid-row-gap: 15px;
+    }
+}
+@media screen and (min-width: 1200px)
+{
+    .container2
+    {
+        display: flex;
+    }
+    .supertxt
+    {
+        margin-left: 20px;
+    }
+    .textdetail
+    {
+        flex: 1;
+       
+        font-family: 'ubuntu', sans-serif;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        border-radius: 6px;
+        margin-top: 20px;
+        margin-right: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: justify;
+    }
+    .img-fluid
+    {
+        flex: 1;
+        text-align: center;
+    }
+    .img-fluid img
+    {
+        margin-top: 20px;
+    }
+}
+@media  screen and (max-width: 1200px) 
+{
+    /* .container2
+    {
+        /* display: flex; 
+        display: block;
+    } */
+    .container2
+    {
+        text-align: center;
+    }
+    .img-fluid
+    {
+        display: inline;
+        width: 400px;
+        height: 400px;
+        /* text-align: center; */
+    }
+    .img-fluid img
+    {
+        margin-top: 20px;
+    }
+    .supertextdetail
+    {
+        text-align: center;
+    }
+    .textdetail
+    {
+        display: inline-block;
+        font-family: 'ubuntu', sans-serif;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        border-radius: 6px;
+        margin-right: 50px;
+        margin-top: 20px;
+        margin-left: 50px;
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px; 
+        width: 400px;
+    }
+    .supertxt
+    {
+        text-align: center;
+    }
+}
 .imageCard
 {
     text-align: center;
@@ -117,7 +224,7 @@ ul li:hover a
 }
 .card .imageCard img
 {
-    width: 350px;
+    width: 500px;
     height: 350px;
 }
 .gift p img
@@ -141,8 +248,8 @@ ul li:hover a
     padding-right: 30px;
     padding-top: 10px;
     padding-bottom: 10px;
-    background: red;
-    border: 2px solid black;
+    background: royalblue;
+    border: 2px solid #f1f1f1;
     border-radius: 5px;
     color: #fff;
     font-family: 'ubuntu', sans-serif;
@@ -153,47 +260,29 @@ ul li:hover a
     background: none;
     color: #111;
     font-weight: 500;
+    font-family: 'ubuntu', sans-serif;
+    transition: 0.3s;
 }
 .containershow
 {
     margin-left: 255px;
     /* margin-top: 10px; */
 }
-.container2
-{
-    display: flex;
-}
+
+
 .img-fluid img
 {
-    display: block;
+    /* display: block; */
     width: 400px;
     height: 400px;
-    margin-left: 25px;
+    /* margin-left: 25px; */
     border-radius: 5px;
+   
     /* object-fit: cover; */
 }
-.img-fluid
-{
-    flex: 1;
-    margin-top: 20px;
-    width: 400px;
-    height: 400px;
-}
 
-.textdetail
-{
-    flex: 1;
-    margin-top: 20px;
-    font-family: 'ubuntu', sans-serif;
-    border: 2px solid black;
-    border-radius: 5px;
-    margin-right: 50px;
-    text-align: justify;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
+
+
 
 .containershow p img
 {

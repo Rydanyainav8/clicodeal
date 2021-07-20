@@ -10,9 +10,18 @@ use Symfony\Component\Routing\Annotation\Route;
 class GameController extends AbstractController
 {
     /**
-     * @Route("/home", name="home")
+     * @Route("/", name="Home")
      */
     public function index(): Response
+    {
+        return $this->render(
+            'home/index.html.twig',
+        );
+    }
+    /**
+     * @Route("/home", name="home")
+     */
+    public function index2(): Response
     {
         return $this->render(
             'home/index.html.twig',

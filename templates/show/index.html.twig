@@ -1,32 +1,39 @@
 {% extends "base.html.twig" %}
 
+{% block title %}Jeu
+{% endblock %}
+
 {% block body %}
 	<div class="containershow">
 		<div class="container2">
 			<div class="img-fluid">
-				<img src="/assets/blog/images/{{ game.image }}" alt="{{ game.title }} "/>
+				<img
+				src="/assets/blog/images/{{ game.image }}" alt="{{ game.title }} "/>
+			{# <img src="{{game.image}}" alt="{{game.title}}"/> #}
 			</div>
-			<div class="textdetail">
-				<h2>{{ game.title }}
-				</h2>
-				<p class="date">
-					<strong>Crée le:
-					</strong>
-					{{ game.createdAt | date("d/m/Y") }}</p>
-				<p class="date">
-					<strong>Date du Tombola:
-					</strong>
-					{{ game.dateEnd | date("d/m/Y") }}
-					<strong>à
-					</strong>
-					{{ game.dateEnd | date("H:i") }}</p>
-				<strong>
-					<class="date">Date limite de Participation:
-					</strong>
-					{{ game.dateEndParticipation | date("d/m/Y") }}</p>
-				<p class="content">
-					{{ game.contenu }}
-				</p>
+			<div class="supertxt">
+				<div class="textdetail">
+					<h2>{{ game.title }}
+					</h2>
+					<p class="date">
+						<strong>Crée le:
+						</strong>
+						{{ game.createdAt | date("d/m/Y") }}</p>
+					<p class="date">
+						<strong>Date du Tombola:
+						</strong>
+						{{ game.dateEnd | date("d/m/Y") }}
+						<strong>à
+						</strong>
+						{{ game.dateEnd | date("H:i") }}</p>
+					<strong>
+						<class="date">Date limite de Participation:
+						</strong>
+						{{ game.dateEndParticipation | date("d/m/Y") }}</p>
+					<p class="content">
+						{{ game.contenu | raw}}
+					</p>
+				</div>
 			</div>
 		</div>
 		<div class="container3">

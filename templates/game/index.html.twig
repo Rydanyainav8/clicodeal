@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Accueil
+{% block title %}Jeu
 {% endblock %}
 
 {% block body %}
@@ -8,10 +8,10 @@
 		<div class="row">
 			{% for game in games %}
 				<div class="card">
-					<div
-						class="imageCard">
-						{# <img src="/assets/blog/images/{{ game.image }}" alt="{{ game.title }}"> #}
-						<img src="/assets/blog/images/stade.png" alt="">
+					<div class="imageCard">
+						<img src="{{game.image}}" alt="{{game.title}}"/>
+					{# src="/assets/blog/images/{{ game.image }}" alt="{{ game.title }}"> #}
+						{# <img src="/assets/blog/images/stade.png" alt=""> #}
 					</div>
 					<div class="container">
 						<div class="container4">
