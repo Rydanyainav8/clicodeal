@@ -1,0 +1,37 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+	<div class="containershow">
+		<h1>
+			Inscription des Partenaires
+		</h1>
+		{% form_theme form 'bootstrap_5_layout.html.twig' %}
+		{{ form_start(form)}}
+		<div class="forminsc">
+			<div class="form-c">
+				<label for="">Nom du Partenaire</label>
+				{{ form_row(form.Partenaire_username, {'label':' ', 'attr': {'placeholder':'Nom du partenaire...'}}) }}
+			</div>
+			<div class="form-c">
+				<label for="">Email</label>
+				{{ form_row(form.Email, {'label':' ', 'attr': {'placeholder':'Email...'}}) }}
+			</div>
+			<div class="form-c">
+				<label for="">Mot de passe</label>
+				{{ form_row(form.password, {'label':' ', 'attr': {'placeholder':'Mot de passe...'}}) }}
+			</div>
+			<div class="form-c">
+				<label for="">Comfirmation mot de passe</label>
+				{{ form_row(form.Confirm_Password, {'label':' ', 'attr': {'placeholder':'Confirmer votre mot de passe'}}) }}
+			</div>
+			<div class="test" hidden>
+
+				{{ form_widget(form.createdAt) }}
+			</div>
+			<button type="submit" class="btn">S'inscrire</button>
+		</div>
+		{{ form_end(form) }}
+
+	</div>
+
+{% endblock %}

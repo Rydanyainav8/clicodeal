@@ -1,0 +1,1 @@
+document.getElementById("registration_partenaire_createdAt").style.display = "none";

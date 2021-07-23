@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Connexion vers Admin
+{% endblock %}
+
+{% block body %}
+	<div class="containershow">
+		<div class="formAuth">
+			<form method="post">
+				{% if error %}
+					<div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+				{% endif %}
+
+				{% if app.user %}
+					<div class="mb-3">
+						You are logged in as
+						{{ app.user.username }},
+						<a href="{{ path('app_logout') }}">Logout</a>
+					</div>
+				{% endif %}
+
+				<h1 class="h3 mb-3 font-weight-normal">Connexion</h1>
+				<div class="field1">
+					<div class="field2">
+						<label for="inputAdminUsername">Nom</label>
+						<br>
+						<input type="text" value="{{ last_username }}" name="AdminUsername" autocomplete="username" required autofocus>
+					</div>
+					<div class="field3">
+						<label for="inputPassword">Mot de passe
+						</label>
+						<br>
+						<input type="password" name="password" autocomplete="current-password" required>
+					</div>
+
+				</div>
+				<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+
+				<div class="checkbox mb-3">
+					<label>
+						<input type="checkbox" name="_remember_me">
+						Remember me
+					</label>
+				</div>
+				<button class="btn btn-lg btn-primary" type="submit">
+					Se connecter
+				</button>
+			</form>
+		</div>
+	</div>
+</div>{% endblock %}

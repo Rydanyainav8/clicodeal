@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\GameRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -57,9 +59,21 @@ class Game
      */
     private $Qr;
 
+    /**
+     * @ORM\ManyToMany(targetEntity=Partenaire::class, mappedBy="title")
+     */
+    private $partenaires;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=User::class, mappedBy="Play")
+     */
+    private $users;
+
     public function __construct()
     {
         $this->createdAt = new \DateTime();
+        $this->partenaires = new ArrayCollection();
+        $this->users = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -159,6 +173,65 @@ class Game
     public function setQr(string $Qr): self
     {
         $this->Qr = $Qr;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Partenaire[]
+     */
+    public function getPartenaires(): Collection
+    {
+        return $this->partenaires;
+    }
+
+    public function __toString()
+    {
+        return $this->title;
+    }
+
+    public function addPartenaire(Partenaire $partenaire): self
+    {
+        if (!$this->partenaires->contains($partenaire)) {
+            $this->partenaires[] = $partenaire;
+            $partenaire->addTitle($this);
+        }
+
+        return $this;
+    }
+
+    public function removePartenaire(Partenaire $partenaire): self
+    {
+        if ($this->partenaires->removeElement($partenaire)) {
+            $partenaire->removeTitle($this);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|User[]
+     */
+    public function getUsers(): Collection
+    {
+        return $this->users;
+    }
+
+    public function addUser(User $user): self
+    {
+        if (!$this->users->contains($user)) {
+            $this->users[] = $user;
+            $user->addPlay($this);
+        }
+
+        return $this;
+    }
+
+    public function removeUser(User $user): self
+    {
+        if ($this->users->removeElement($user)) {
+            $user->removePlay($this);
+        }
 
         return $this;
     }

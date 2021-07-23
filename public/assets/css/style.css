@@ -248,17 +248,17 @@ ul li:hover a
     padding-right: 30px;
     padding-top: 10px;
     padding-bottom: 10px;
-    background: royalblue;
-    border: 2px solid #f1f1f1;
+    background: none;
+    border: 2px solid royalblue;
     border-radius: 5px;
-    color: #fff;
+    color: royalblue;
     font-family: 'ubuntu', sans-serif;
     font-weight: 500;
 }
 .btn:hover
 {
-    background: none;
-    color: #111;
+    background: royalblue;
+    color: white;
     font-weight: 500;
     font-family: 'ubuntu', sans-serif;
     transition: 0.3s;
@@ -315,7 +315,69 @@ ul li:hover a
     right: 50px;
 }
 /*police body*/
-.left, .qr, .container, h1
+.left, .qr, .container, h1, label
 {
+    font-family: 'ubuntu', sans-serif;
+}
+.home .containershow h1
+{
+    padding-top: 40vh;
+    padding-left: 50px;
+    color: rgba(0, 0, 0, 0.582);
+    font-size: 3vw;
+}
+
+.formAuth
+{
+    /* display: block; */
+    text-align: center;
+}
+.form-control
+{
+    display: block;
+    text-align: center;
+
+}
+form
+{
+    padding-top: 40vh;
+}
+.field1
+{
+    text-align: center;
+}
+.field2, .field3
+{
+    display: block
+}
+.home
+{
+    background-image: url("pexels-jéshoots-238118.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+body
+{
+    background-color: #f1f1f1f1;
+}
+.forminsc
+{
+    padding-bottom: 30px;
+    text-align: center;
+}
+.form-c
+{
+    display: block;
+    text-align: center;
+    padding-bottom: 30px;
+}
+.form-c input
+{
+    margin-left: 40%;
+}
+.invalid-feedback
+{
+    color: red;
     font-family: 'ubuntu', sans-serif;
 }

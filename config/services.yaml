@@ -6,6 +6,9 @@
 parameters:
 
 services:
+   # the id is not a class, so it won't be used for autowiring
+    # app.rot13.transformer:
+    #     class: App\Util\Rot13Transformer
     # default configuration for services in *this* file
     _defaults:
         autowire: true      # Automatically injects dependencies in your services.
